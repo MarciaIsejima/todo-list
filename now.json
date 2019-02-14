@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "wmdd-get-w5",
+  "env": {
+    "DBHOST": "@dbhost",
+    "DBPORT": "@dbport",
+    "DBUSER": "@dbuser",
+    "DBPASSWORD": "@dbpassword",
+    "DBNAME": "@dbname"
+  },
+  "builds": [
+    { "src": "index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
