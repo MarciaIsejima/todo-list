@@ -14,6 +14,6 @@ To test this application use httpie with the JSON files provided:
 ```http PUT https://wmdd-todo-list-387vjqurb.now.sh/api/put < updateToDo.json```
 
 - DELETE method <br>
-```http PUT https://wmdd-todo-list-387vjqurb.now.sh/api/delete < deleteToDo.json```
+```http DELETE https://wmdd-todo-list-387vjqurb.now.sh/api/delete < deleteToDo.json```
 
 The database scripts are provided in sql_scripts folder.
