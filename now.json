@@ -1,17 +1,23 @@
 {
   "version": 2,
-  "name": "wmdd-get-w5",
+  "name": "wmdd-todo-list",
+  "alias": "wmdd-todo-list.now.sh",
   "env": {
     "DBHOST": "@dbhost",
     "DBPORT": "@dbport",
     "DBUSER": "@dbuser",
     "DBPASSWORD": "@dbpassword",
-    "DBNAME": "@dbname"
+    "DBNAME": "todos"
   },
   "builds": [
-    { "src": "index.js", "use": "@now/node" }
+    { "src": "api/*/index.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" }
+    { "src": "/api/get", "methods": ["GET"], "dest": "/api/get/index.js" },
+    { "src": "/api/put", "methods": ["PUT"], "dest": "/api/put/index.js" },
+    { "src": "/api/post", "methods": ["POST"], "dest": "/api/post/index.js" },
+    { "src": "/api/delete", "methods": ["DELETE"], "dest": "/api/delete/index.js" },
+    { "src": "/", "status": 404},
+    { "src": "/api", "status": 404}
   ]
 }

@@ -1,6 +1,19 @@
 # WMDD-4935
-## Week 6 lab: GET Request Endpoint
+## Assignment One
 
-To test this application use httpie GET request and the getSample.json file provided:
+To test this application use httpie with the JSON files provided:
 <br><br>
-```http GET https://wmdd-get-w5-o866mir5p.now.sh < getSample.json```
+
+- GET method
+```https://wmdd-todo-list-387vjqurb.now.sh/api/get```
+
+- POST method
+```https://wmdd-todo-list-387vjqurb.now.sh/api/post < insertToDo.json```
+
+- PUT method
+```http GET https://wmdd-get-w5-o866mir5p.now.sh < updateToDo.json```
+
+- DELETE method
+```http GET https://wmdd-get-w5-o866mir5p.now.sh < deleteToDo.json```
+
+The database scripts are provided in DB folder.
